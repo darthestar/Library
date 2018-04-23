@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Library.Data;
 using Library.Models;
+using System.Data.Entity;
 
 
 namespace Library.Controllers
@@ -15,7 +16,8 @@ namespace Library.Controllers
         public IEnumerable<Book> Get()
         {
             var dbLibrary = new LibraryContext();
-            return dbLibrary.Books.ToList();
+            var data = dbLibrary.Books.Include(i => i.Author).Include(i => i.Genre);
+            return data.ToList();
         }
     }
 }

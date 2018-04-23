@@ -187,6 +187,7 @@
     <Compile Include="Controllers\AuthorFactoryController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\BookFactoryController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\GenreFactoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -212,12 +213,22 @@
     <Compile Include="Migrations\201804201629371_UPdatedLibraryContext.Designer.cs">
       <DependentUpon>201804201629371_UPdatedLibraryContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804231758255_UpdateCheckoutLedgerVModel.cs" />
+    <Compile Include="Migrations\201804231758255_UpdateCheckoutLedgerVModel.Designer.cs">
+      <DependentUpon>201804231758255_UpdateCheckoutLedgerVModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231808259_ReAddedCheckoutTable.cs" />
+    <Compile Include="Migrations\201804231808259_ReAddedCheckoutTable.Designer.cs">
+      <DependentUpon>201804231808259_ReAddedCheckoutTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\Checkout.cs" />
+    <Compile Include="Models\Checkouts.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CheckoutReceiptViewModel.cs" />
+    <Compile Include="ViewModels\CheckoutViewModel.cs" />
     <Compile Include="ViewModels\SearchParams.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +238,10 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -251,6 +266,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -271,6 +287,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\AllBooks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,6 +317,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804201629371_UPdatedLibraryContext.resx">
       <DependentUpon>201804201629371_UPdatedLibraryContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231758255_UpdateCheckoutLedgerVModel.resx">
+      <DependentUpon>201804231758255_UpdateCheckoutLedgerVModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231808259_ReAddedCheckoutTable.resx">
+      <DependentUpon>201804231808259_ReAddedCheckoutTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

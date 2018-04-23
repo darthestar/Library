@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Library.Models
 {
-    public class Checkout
+    public class Checkouts
     {
         public int ID { get; set; }
         public DateTime TimeStamp { get; set; }

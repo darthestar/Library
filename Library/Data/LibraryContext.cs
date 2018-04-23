@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using Library.Models;
+using Library.ViewModels;
 
 namespace Library.Data
 {
@@ -17,6 +18,5 @@ namespace Library.Data
         public DbSet<Book>Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Checkout> Checkouts { get; set; }
     }
 }
