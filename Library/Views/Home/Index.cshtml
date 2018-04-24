@@ -1,8 +1,20 @@
 ﻿<div class="jumbotron" ng-app="LibraryApp" ng-controller="MainAppController">
-    <h1>ASP.NET---*****</h1>
+    <h1>Book List</h1>
+    <div>-------------------------</div>
+    <section class="search">
+        <br> Enter Book Title:
+        <input type="text" ng-model="userInquiry">
+        <br>
+        <button ng-click="checkForBook()">Click to Search</button>
+        <section ng-show="getBookToCheckout()">This is the book you selected. Check it out? {{bookTitleToCheckout}}</section>
 
+    </section>
     <div ng-repeat="book in books track by $index">
-        {{book.Title }}
+        Book Title: {{book.Title }},
+        <div class="authors">Author: {{book.Author["Name"]}},</div>
+        <header class="genres">Genre: {{book.Genre["DisplayName"]}}</header>
+        <div> ****************************************</div>
     </div>
+
 </div>
 
